@@ -17,8 +17,8 @@ const Hamburger: React.FC = () => {
         <a href="/">
           首页<em>/</em>HOME
         </a>
-        <a href="/weekly">
-          周记<em>/</em>WEEK
+        <a href="/record">
+          记录<em>/</em>RECORD
         </a>
         <a href="/tags">
           标签<em>/</em>TAGS

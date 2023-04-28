@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import BlockTitle from '../components/BlockTitle.astro'
 import YearBlogList from '../components/YearBlogList.astro'
 
-const allWeeks = await Astro.glob('../pages/weekly/*.{md,mdx}')
+const allWeeks = await Astro.glob('../pages/record/*.{md,mdx}')
 const postCollects = {}
 allWeeks.forEach((item) => {
   const { pubDate } = item.frontmatter
@@ -17,8 +17,8 @@ allWeeks.forEach((item) => {
 })
 ---
 
-<BaseLayout pageTitle="周记">
-  <BlockTitle title="周记" backgroundText="Weekly" />
+<BaseLayout pageTitle="记录">
+  <BlockTitle title="记录" backgroundText="Record" />
   {
     Object.entries(postCollects)
       .sort((postOne, postTwo) => parseInt(postTwo[0]) - parseInt(postOne[0]))

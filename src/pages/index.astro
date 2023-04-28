@@ -3,16 +3,9 @@ import dayjs from 'dayjs'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BlockTitle from '../components/BlockTitle.astro'
 import YearBlogList from '../components/YearBlogList.astro'
-import EmailLink from '../components/LinkComponents/EmailLink.astro'
-import ReactLink from '../components/LinkComponents/ReactLink.astro'
-import NestJsLink from '../components/LinkComponents/NestJsLink.astro'
-import NodeJsLink from '../components/LinkComponents/NodeJsLink.astro'
-import GithubLink from '../components/LinkComponents/GithubLink.astro'
-import AstroLink from '../components/LinkComponents/AstroLink.astro'
 
-const allPosts = await Astro.glob('./posts/*.{md,mdx}')
-const allWeeks = await Astro.glob('./weekly/*.{md,mdx}')
-const allBlogs = [...allPosts, ...allWeeks]
+const allBlogs = await Astro.glob('./record/*.{md,mdx}')
+
 const postCollects = {}
 allBlogs.forEach((item) => {
   const { pubDate } = item.frontmatter
@@ -24,24 +17,11 @@ allBlogs.forEach((item) => {
   }
 })
 
-const pageTitle = 'AqingCyan'
+const pageTitle = 'Class Rain'
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <BlockTitle title="关于我" backgroundText="AqingCyan" />
-
-  <p class="about-me">
-    Hi! 我是 AqingCyan 👋
-    <br />
-    是前端开发工程师，目前就职于网易。这是我用来记录生活和一些技术理解的博客网站。你可以通过：
-    <EmailLink text="我的邮箱" href="mailto:AqingCyan@gmail.com" />、
-    <GithubLink text="Github" href="https://github.com/aqingcyan" />
-    来与我取得联系。
-    <br />
-    本博客是由我自己主导设计并基于 <AstroLink text="Astro" href="/tags/astro" /> 开发，如果你喜欢此博客模板，可以 Fork 本仓库进行二次改造。感谢你读到此处！
-  </p>
-
-  <BlockTitle title="博客" backgroundText="Blogs" />
+  <BlockTitle title="博客" backgroundText="Glass Rain" />
   {
     Object.entries(postCollects)
       .reverse()

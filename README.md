@@ -1,9 +1,3 @@
-# Hi! I'm AqingCyan 👋
+# 朋友的博客
 
-This is my blog
-
-I'm a software development. My email is AqingCyan@gmail.com.
-
-Here is my website: https://aqingcyan.me
-
-My English is not very good. If you find any grammatical mistakes, please correct them. Thank you 🥰
+暂存此处
