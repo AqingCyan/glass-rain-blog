@@ -2,12 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlockTitle from '../../components/BlockTitle.astro'
 
-const allPosts = await Astro.glob('../posts/*.{md,mdx}')
-const allWeeks = await Astro.glob('../weekly/*.{md,mdx}')
-const allBlogs = [...allPosts, ...allWeeks]
+const allPosts = await Astro.glob('../record/*.{md,mdx}')
 
 const tags = {}
-allBlogs
+allPosts
   .map((post) => post.frontmatter.tags)
   .flat()
   .forEach((item) => {
